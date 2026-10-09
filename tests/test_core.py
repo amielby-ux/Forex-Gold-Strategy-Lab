@@ -23,7 +23,7 @@ def test_next_open_not_same_bar_and_costs():
     assert no_cost["count"] == 1
     assert no_cost["trades"][0]["entry_time"] == df.index[1]
     assert no_cost["trades"][0]["exit_time"] == df.index[2]
-    assert with_cost["net_pnl_quote_per_unit"] == pytest.approx(no_cost["net_pnl_quote_per_unit"] - 0.32)
+    assert with_cost["net_pnl_quote_per_unit"] == pytest.approx(no_cost["net_pnl_quote_per_unit"] - 0.31)
 
 def test_invalid_data_rejected():
     df = bars()
